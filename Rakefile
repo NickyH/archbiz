@@ -3,5 +3,4 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-
-RecipezyV2::Application.load_tasks
+Archbiz_app::Application.load_tasks

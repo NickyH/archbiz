@@ -1,4 +1,4 @@
-RecipezyV2::Application.routes.draw do
+Archbiz_app::Application.routes.draw do
 
 root :to => 'home#index'
 
