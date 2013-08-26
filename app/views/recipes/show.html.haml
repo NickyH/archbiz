@@ -1,0 +1,33 @@
+.row
+  .12-large.columns
+    .panel.wholerecipe
+      =link_to("<< Back to all recipes", recipes_path)
+      %h4= "#{@recipe.title}"
+      .keyingredient-text= "#{@recipe.key_ingredient}"
+      / .minutes-text= "#{@recipe.preptime}"
+      / .minutes-text= "#{@recipe.cooktime}"
+      / .serves-text= "#{@recipe.servings}"
+      != show_recipe_instructions(@recipe.instructions, @tutorials)
+      =link_to 'Delete', @recipe, :method => :delete
+      =link_to 'Edit', edit_recipe_path(@recipe), :method => :get
+
+    #ingredient_list
+      = render(:partial => 'items')
+
+    #show_add_item_form= '+ Add an Ingredient'
+    .4-large.columns
+    #ingredient_form
+      / =image_tag(@recipe.image, :class => 'showrecipeimg')
+      #itemform.hide
+        = form_tag add_item_recipes_path, :method => :post, :remote => true do
+          = hidden_field_tag :recipe_id, @recipe.id
+          = label_tag 'Select Ingredient'
+          = select_tag 'select_ingredient', options_for_select(@ingredients.map{ |i| [i, i] })
+          = label_tag 'How many units (ie ml, grams) does the recipe need?'
+          = text_field_tag :quantity
+          = label_tag 'Enter the ingredient as a line of text as it appears in your recipe'
+          = text_field_tag :recipe_note
+          .recipezybtn_additem= submit_tag 'Add Item to Recipe'
+          #cancel_item_form
+            .cancel_text= 'x'
+          .clear

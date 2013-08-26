@@ -1,0 +1,40 @@
+  <nav class="top-bar">
+    <ul class="title-area">
+
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="has-dropdown">
+          <% if @auth.present? %>
+          <li><%= link_to('Logout', login_path, :method => :delete, :id => 'navtablog') %></li>
+        <% else %>
+          <li id='loginlink'><%= link_to('Contact', login_path, :id => 'navtablog') %></li>
+          <li class="divider"></li>
+        <li><%= link_to('Sign Up!', new_user_path, :id => 'navtab') %></li>
+        <% end %>
+      </ul>
+
+      <!-- Right Nav Section -->
+      <ul class="right">
+
+        <li class="has-dropdown">
+           <% if @auth.present? %>
+
+           <li><%= link_to("#{@auth.name}", users_path, :id => 'navtab') %></li>
+           <li><%= link_to('Recipes', recipes_path, :id => 'navtab') %></li>
+           <li><%= link_to('Ingredients', ingredients_path, :id => 'navtab') %></li>
+
+        <li><%= link_to('Profile', user_path(@auth), :id => 'navtab') %></li>
+
+        <li><%= link_to('Glossary', tutorials_path, :id => 'navtab') %></li>
+         <% end %>
+
+        </ul>
+<div id='loginform' class='hide'>
+
+</div>
+    </section>
+  </nav>
+

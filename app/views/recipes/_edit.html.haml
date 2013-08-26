@@ -1,0 +1,23 @@
+.row
+  .panel.panelauto
+    .large-7.columns
+      = form_for @recipe do |f|
+        = f.label :title
+        = f.text_field :title, :autofocus => true, :value => "#{@recipe.title}"
+        = f.label :key_ingredient
+        = f.text_field :key_ingredient, :value => "#{@recipe.key_ingredient}"
+        = f.label :preptime
+        = f.text_field :preptime, :value => "#{@recipe.preptime}"
+        = f.label :cooktime
+        = f.text_field :cooktime, :value => "#{@recipe.cooktime}"
+        = f.label :image
+        = f.text_field :image, :value => "#{@recipe.image}"
+        = f.label :instructions
+        = f.text_area :instructions, :value => "#{@recipe.instructions}"
+        = f.label :sevings
+        = f.text_field :servings, :value => "#{@recipe.servings}"
+        = f.submit 'Update', :class => 'button radius tiny', :id => 'update_recipe', :remote => true
+        .cancel_text.has-tip= link_to 'x', recipes_path, :remote => true, :id => 'cancel_recipe_form', :title => 'cancel recipe'
+    .large-5.columns
+
+

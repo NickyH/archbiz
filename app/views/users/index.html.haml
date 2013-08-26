@@ -1,0 +1,8 @@
+%h1= 'find foodies in your area!'
+
+/ = button_tag 'Map', :class => 'button radius tiny', :id => 'show_map'
+
+/ .large-6.columns
+/   #map_canvas
+/   %script
+/     = "display_map(#{@auth.lat}, #{@auth.long}, 2);"

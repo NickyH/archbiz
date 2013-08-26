@@ -1,0 +1,11 @@
+.row
+  .small-2.columns
+  .panel.small-3.columns
+    = form_tag '/login' do
+      = label_tag 'email'
+      = text_field_tag 'email', nil, :autofocus => true
+      = label_tag 'password'
+      = password_field_tag 'password'
+      = submit_tag 'Sign in', :class => 'button radius'
+    .cancel_text.has-tip= link_to 'x', recipes_path, :id => 'cancel_login_form', :title => 'cancel login'
+.small-7.columns

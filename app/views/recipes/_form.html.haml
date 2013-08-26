@@ -1,0 +1,21 @@
+.large-5.columns
+  = form_for @recipe do |f|
+    = f.label :title
+    = f.text_field :title, :autofocus => true
+    = f.label :key_ingredient
+    = f.text_field :key_ingredient
+    = f.label :preptime
+    = f.text_field :preptime
+    = f.label :cooktime
+    = f.text_field :cooktime
+    = f.label :image
+    = f.text_field :image
+    = f.label :instructions
+    = f.text_area :instructions
+    = f.label :servings
+    = f.text_field :servings
+    = f.submit nil, :class => 'button radius tiny'
+    .cancel_text.has-tip= link_to 'x', recipes_path, :remote => true, :id => 'cancel_recipe_form', :title => 'cancel recipe'
+.large-7.columns
+
+

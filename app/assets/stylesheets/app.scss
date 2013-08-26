@@ -1,0 +1,35 @@
+
+@import url(http://fonts.googleapis.com/css?family=Molle:400italic);
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Archivo+Black);
+
+
+.hide
+{
+  display: hidden;
+}
+
+.float
+{
+  float: left;
+  margin-right: 30px;
+}
+
+/*#background-image {
+  background:url(tree_bark.png);
+  background-size:100% 100%;
+  background-repeat:repeat;
+}*/
+
+#title-logo {
+  img {
+    width: 200px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    margin-bottom: 300px;
+  }
+}

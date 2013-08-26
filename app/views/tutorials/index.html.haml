@@ -1,0 +1,12 @@
+#new_tutorial
+
+.row
+  .panel
+    .small-3.columns
+      = link_to('Add Lesson', new_tutorial_path, :remote => 'true', :class => 'button radius', :id => 'new_tutorial_btn')
+      = link_to('Browse All', tutorials_path, :remote => 'true', :class => 'button radius', :id => 'browse_tutorials')
+    .small-9.columns
+
+.row
+  .small-7.columns
+    #tutorials

@@ -1,0 +1,15 @@
+%h1= 'find foodies in your area!'
+
+.row
+  #map_canvas
+    / %script
+    /   = "display_map(#{@auth.latitude}, #{@auth.longitude}, 2);"
+
+
+
+/ - Users.each do |user|
+/   - @cities = user.map(&:city)
+
+/ = select_tag 'Location', options_for_select(@cities.map{ |a| [a, a] })
+
+/ = button_tag 'Find', :class => 'button radius tiny', :id => 'show_map'
