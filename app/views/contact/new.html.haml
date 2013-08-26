@@ -1,0 +1,16 @@
+#loginform
+.row
+  .small-2.columns
+  .panel.small.small-3.columns
+    = form_tag '/contact' do
+      = label_tag 'Name'
+      = text_field_tag 'name', nil, :autofocus => true
+      = label_tag 'Email'
+      = text_field_tag 'email'
+      = label_tag 'Phone'
+      = text_field_tag 'phone'
+      = label_tag 'Comments/Questions'
+      = text_area_tag 'password'
+      = submit_tag 'Submit', :class => 'button radius recipezybtn'
+    .cancel_text#cancel_login_form= link_to 'x', root_path
+.small-7.columns
