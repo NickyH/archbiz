@@ -1,5 +1,5 @@
 Pony.mail({
-  :to => 'nickyhughes00@gmail.com',
+  :to => 'example@gmail.com',
   :via => :sendmail,
   :via_options => {
     :location  => '/usr/sbin/sendmail', # defaults to 'which sendmail' or '/usr/sbin/sendmail' if 'which' fails
