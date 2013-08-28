@@ -6,6 +6,8 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
 gem 'geocoder'
+gem 'pony'
+gem 'mail'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
