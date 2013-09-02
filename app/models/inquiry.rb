@@ -29,6 +29,7 @@ class Inquiry
   def deliver
     return false unless valid?
     Pony.mail({
+      :to => ENV['GMAIL_USERNAME'],
       :from => %("#{name}" <#{email}>),
       :reply_to => email,
       :subject => "Website inquiry",
