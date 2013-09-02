@@ -164,6 +164,6 @@ DEPENDENCIES
   pry-rails
   pry-stack_explorer
   quiet_assets
-  rails (= 3.2.11)
+  rails (~> 3.2.0.rc2)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
