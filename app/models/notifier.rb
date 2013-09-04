@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
 
   # send inquiry contact email to website owner
   def new_inquiry(inquiry)
-    mail( :subject => 'NEW INQUIRY', :text => 'new inquiry test' )
+    mail( :to => ENV['GMAIL_USERNAME'], :from => ENV['GMAIL_USERNAME'], :subject => 'NEW INQUIRY', :text => 'new inquiry test' )
   end
 
 end
