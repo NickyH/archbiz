@@ -2,7 +2,7 @@
 .row
   .small-2.columns
   .panel.small.small-3.columns
-    = form_tag '/inquiries' do
+    = form_tag '/inquiries', method => 'get' do
       = label_tag 'Name'
       = text_field_tag 'name', nil, :autofocus => true
       .nickname= label_tag 'nickname'

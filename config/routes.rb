@@ -6,8 +6,10 @@ root :to => 'home#index'
 get '/about' => 'pages#about'
 get '/inspiration' => 'pages#inspiration'
 
-resources :inquiries, :only => [:new, :create] do
+resources :inquiries, :only => [:new] do
   get 'thank_you', :on => :collection
 end
+
+get '/inquiries' => 'inquiries#create'
 
 end
