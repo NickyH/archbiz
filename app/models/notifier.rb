@@ -3,7 +3,6 @@ class Notifier < ActionMailer::Base
 
   # send inquiry contact email to website owner
   def new_inquiry(inquiry)
-    binding.pry
     mail( :to => ENV['GMAIL_USERNAME'],
     :subject => 'NEW INQUIRY' )
   end
