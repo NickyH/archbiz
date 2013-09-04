@@ -6,8 +6,8 @@ class InquiriesController < ApplicationController
 
   def create
     @inquiry = Inquiry.new(params[:inquiry])
-    # Deliver the signup_email
-    Inquiry.new_inquiry(@inquiry).deliver
+    # Deliver the inquiry_email
+    Notifier.new_inquiry(@inquiry).deliver
     render :new
   end
 

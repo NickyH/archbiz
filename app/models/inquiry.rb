@@ -1,5 +1,8 @@
-class Inquiry < ActionMailer::Base
-  default :from => ENV['GMAIL_USERNAME']
+class Inquiry
+  extend ActiveModel::Naming
+  include ActiveModel::Conversion
+  include ActiveModel::Validations
+  include ActionView::Helpers::TextHelper
 
   attr_accessor :name, :email, :message, :nickname
 
@@ -23,10 +26,7 @@ class Inquiry < ActionMailer::Base
     end
   end
 
-  # send a signup email to the user, pass in the user object that contains the user's email address
-  def new_inquiry(inquiry)
-    mail( :to => ENV['GMAIL_USERNAME'],
-    :subject => 'NEW INQUIRY' )
+  def persisted?
+    false
   end
-
 end
