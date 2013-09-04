@@ -8,11 +8,7 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(params[:inquiry])
     # Deliver the signup_email
     Inquiry.new_inquiry(@inquiry).deliver
-    if Inquiry.new_inquiry(@inquiry).deliver
-      render :thank_you
-    else
-      render :new
-    end
+    render :new
   end
 
 end
