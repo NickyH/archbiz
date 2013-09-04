@@ -6,6 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Archivo+Black);
 
+@import url(http://fonts.googleapis.com/css?family=News+Cycle);
 
 .hide
 {
@@ -41,4 +42,13 @@
 
 .nickname {
   display: none;
+}
+
+.intro-text
+{
+  font-family: 'News Cycle', sans-serif;
+  width: 300px;
+  position: absolute;
+  top: 150px;
+  left: 500px;
 }
