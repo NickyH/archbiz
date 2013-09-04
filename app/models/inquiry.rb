@@ -1,4 +1,4 @@
-class Notifier < ActionMailer::Base
+class Inquiry < ActionMailer::Base
   default :from => ENV['GMAIL_USERNAME']
 
   # send a signup email to the user, pass in the user object that contains the user's email address
