@@ -7,7 +7,10 @@ class Notifier < ActionMailer::Base
     mail( :to => ENV['GMAIL_USERNAME'],
           :from => ENV['GMAIL_USERNAME'],
           :subject => 'NEW INQUIRY' + ' from ' + name,
-          :text => message )
+          :body => message,
+          :content_type => "text/html",
+          :sent_on => Time.now
+        )
   end
 
 end
