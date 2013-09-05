@@ -11,8 +11,12 @@ class InquiriesController < ApplicationController
     @phone = params[:phone]
     @email = params[:email]
     # Deliver the inquiry_email
-    Notifier.new_inquiry(@name, @email, @phone, @message).deliver
-    render :new
+
+    if Notifier.new_inquiry(@name, @email, @phone, @message).deliver
+       redirect_to('/', :notice => "Support was successfully sent.")
+    else
+      flash[:alert] = "You must fill all fields."
+    render nothing: true
   end
 
 end
