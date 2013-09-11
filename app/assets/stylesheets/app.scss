@@ -38,6 +38,10 @@
 .top-bar {
   padding-left: 10%;
   height: 200px;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
 }
 
 .nickname {
@@ -49,6 +53,6 @@
   font-family: 'News Cycle', sans-serif;
   width: 300px;
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 500px;
 }
